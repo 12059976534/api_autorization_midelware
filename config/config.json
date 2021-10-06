@@ -20,7 +20,7 @@
     "host": "ec2-52-204-213-254.compute-1.amazonaws.com",
     "dialect": "postgres",
     "dialectOptions": {
-      "ssl": true
+      "ssl": { "rejectUnauthorized": false }
     }
   }
 }

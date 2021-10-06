@@ -14,12 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "password",
-    "database": "urlshortener_production",
-    "host": "localhost",
-    "dialect": "postgres",
-    "operatorsAliases": false,
-    "use_env_variable": "DATABASE_URL"
+    "username": "slmqeaopflrkgz",
+    "password": "9be5e3440d78dfb910126d160924c1e6e2b5b2360e42f40544522da3b481199c",
+    "database": "dcpqjmffq8pv08",
+    "host": "ec2-52-204-213-254.compute-1.amazonaws.com",
+    "dialect": "postgres"
   }
 }

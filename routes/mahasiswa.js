@@ -1,6 +1,7 @@
 const express=require("express");
 const router=express.Router();
 const controler=require("../controler/mahasiswa");
+const authmidelwere=require("../controler/autorization/autorization-midelware")
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination:function(req, file, cb){
@@ -15,6 +16,6 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage});
 
 router.post("/",upload.single("image"),controler.posDataMahasiswa);
-router.get("/alldata",controler.alldata);
+router.get("/alldata",authmidelwere("customer:read"),controler.alldata);
 
 module.exports=router;

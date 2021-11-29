@@ -4,6 +4,7 @@ const morgan=require("morgan")
 
 const bodyParser=require("body-parser")
 const mahasiswaroute=require("./routes/mahasiswa")
+const autoriz=require("./routes/autorization")
 const cors=require('cors')
 app.use(cors({
     origin: "*"
@@ -21,8 +22,8 @@ app.use(bodyParser.json());
 
 app.use(morgan('dev'))
 
-
 app.use("/mahasiswa",mahasiswaroute);
+app.use("/gettoken",autoriz);
 
 // ===== hendling error ======
 app.use((req, res, next) => {

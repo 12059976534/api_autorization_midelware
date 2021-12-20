@@ -15,7 +15,8 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage:storage});
 
-router.post("/",upload.single("image"),controler.posDataMahasiswa);
+// router.post("/",controler.posDataMahasiswa); // tidak di lengkapi multer tidak suport request melalui form data
+router.post("/",upload.single("image"),authmidelwere("customer:read"),controler.posDataMahasiswa);  // dilengkapi multer berpungsi jika reques melalu form data 
 router.get("/alldata",authmidelwere("customer:read"),controler.alldata);
 
 module.exports=router;

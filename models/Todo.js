@@ -65,7 +65,7 @@ module.exports = (sequelize,DataTypes)=>{
     
     // Todo.removeAttribute("id"); //secara default sequelize akan memanggil fild id tapi karna kita belum ada fild id di table mahasiswa kita remove dulu
     
-    return Todo;
+    return Todo;    
 
 }
 // module.exports=masukanData;

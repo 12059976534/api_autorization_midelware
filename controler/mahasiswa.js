@@ -1,9 +1,9 @@
 const db = require("../models")
 
-var controler={};
+var controler={};       
 
 controler.posDataMahasiswa = async function(req,res,next){
-    console.log("data requess===",req.body.text)
+    console.log("data requess===",req.body)
     try {
         let Todo = await db.Todo.create({
             namawisata:req.body.namawisata,

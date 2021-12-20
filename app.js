@@ -2,7 +2,9 @@ const express=require("express");
 const app=express();
 const morgan=require("morgan")
 
-const bodyParser=require("body-parser")
+// const bodyParser=require("body-parser")
+
+
 const mahasiswaroute=require("./routes/mahasiswa")
 const autoriz=require("./routes/autorization")
 const cors=require('cors')
@@ -13,17 +15,24 @@ app.use(cors({
 // =====using morgan to hanle consol view=======
 // =====use body parser to hendle clien riques=======
 // app.use(express.json())
-app.use(bodyParser.urlencoded({
-    extended:false,
-}));
+// app.use(bodyParser.urlencoded({
+//     extended:false,
+// }));
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+
+
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+
 
 
 app.use(morgan('dev'))
 
 app.use("/mahasiswa",mahasiswaroute);
 app.use("/gettoken",autoriz);
+
+
 
 // ===== hendling error ======
 app.use((req, res, next) => {

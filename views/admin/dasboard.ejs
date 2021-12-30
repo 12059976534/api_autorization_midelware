@@ -1,0 +1,39 @@
+<% layout('../layout/base') -%>
+
+
+<!-- sidbar -->
+<div class="sidebar" id="sidbar">
+    <div class="logo-details">
+      <i class="" id="logo"></i>
+        <div class="logo_name">Respull</div>
+        
+        <i class="fas fa-times" id="btn"></i>
+    </div>
+    <ul class="nav-list" id="menusidbar">
+      <li>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-tachometer-alt" style="color: beige;"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+         
+      </li>
+      
+    </ul>
+  </div>
+  <section>
+    <textarea style="height: 500px;"  name="editor1" id="" cols="30" rows="10"></textarea>
+  </section>
+  
+  <script>
+     var CKEDITOR_BASEPATH = '/ckeditor/';
+  </script>
+  
+
+  <script src="script/script.js"></script>
+
+<!-- end sidbar -->

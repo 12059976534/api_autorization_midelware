@@ -24,6 +24,9 @@
 
 // mahasiswa.removeAttribute("id"); //secara default sequelize akan memanggil fild id tapi karna kita belum ada fild id di table mahasiswa kita remove dulu
 
+
+
+
 module.exports = (sequelize,DataTypes)=>{
 
     const Todo = sequelize.define("Todo",
@@ -59,6 +62,8 @@ module.exports = (sequelize,DataTypes)=>{
         // freezeTableName:true, //ketika sequelize medefine table secara default akan di tambahkan s contah mahasiswa menjadi mahasiswas maka untuk menghindari itu perlu setup freezeTableName:true
         // timestamps:false // secara default sequelize akan memanggil fild create add dan update add karna di database kita belum ada paka kita setup timestamps ke false
     });
+
+    
     
     // mahasiswa.hasOne(jurusanMahasiwa,{foreignKey: "jurusan"});
     // mahasiswa.belongsTo(jurusanMahasiwa,{foreignKey: "jurusan",targetKey: 'jurusan'},);
@@ -68,6 +73,8 @@ module.exports = (sequelize,DataTypes)=>{
     return Todo;    
 
 }
+
+
 // module.exports=masukanData;
 
 // module.exports=(sequelize,DataTypes)=>{

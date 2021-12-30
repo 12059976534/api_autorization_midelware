@@ -1,6 +1,10 @@
 const db = require("../models")
+// const express=require("express");
+// const app=express();
 
-var controler={};       
+
+var controler={};
+
 
 controler.posDataMahasiswa = async function(req,res,next){
     console.log("data requess===",req.body)
